@@ -47,29 +47,29 @@ function NavBar() {
                         <Col>
                             <Row>
                                 <Navbar.Brand href="#home">
-                                    <h1>Ruby Wang</h1>
+                                    <h1 style={{ color: "white" }}>Ruby Wang</h1>
                                 </Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                                     <span className='navbar-toggler-icon'></span>
                                 </Navbar.Toggle>
-                                <Navbar.Collapse id="basic-navbar-nav" className='justify-between'>
+                                <Navbar.Collapse id="basic-navbar-nav" className='justify-between navbar-text'>
                                     <Nav className="me-auto justify-between navbar-text">
                                         <Nav.Link href="#home"
                                             className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
                                             onClick={() => { onUpdateActiveLink("home") }}>
-                                            Home</Nav.Link>
+                                            Top / </Nav.Link>
                                         <Nav.Link href="#about" className={activeLink === "about" ? "active navbar-link" : "navbar-link"}
                                             onClick={() => { onUpdateActiveLink("about") }}>
-                                            About</Nav.Link>
+                                            About / </Nav.Link>
                                         <Nav.Link href="#skills" className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
                                             onClick={() => { onUpdateActiveLink("skills") }}>
-                                            Skills</Nav.Link>
+                                            Skills / </Nav.Link>
                                         <Nav.Link href="#experience" className={activeLink === "experience" ? "active navbar-link" : "navbar-link"}
                                             onClick={() => { onUpdateActiveLink("experience") }}>
-                                            Experience</Nav.Link>
+                                            Experience / </Nav.Link>
                                         <Nav.Link href="#projects" className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
                                             onClick={() => { onUpdateActiveLink("projects") }}>
-                                            Projects</Nav.Link>
+                                            Projects / </Nav.Link>
                                         <Nav.Link href="#contact" className={activeLink === "contact" ? "active navbar-link" : "navbar-link"}
                                             onClick={() => { onUpdateActiveLink("contact") }}>
                                             Contact</Nav.Link>

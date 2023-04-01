@@ -89,6 +89,13 @@ span.navbar-text {
 
 
 
+nav.navbar .navbar-nav .nav-link.navbar-link:hover {
+  background-color: #f1faee;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;
