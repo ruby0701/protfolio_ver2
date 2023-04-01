@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Nav, Tab, Card, Tabs } from 'react-bootstrap';
+import ProjectCard from './ProjectCard';
 
 function Projects() {
     const projects = [
@@ -7,23 +8,23 @@ function Projects() {
             title: "Test1",
             description: "test",
             skillSet: "abc",
-            imgUrl: "add later",
+            imgUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         },
         {
-            title: "Test2",
-            description: "test",
-            skillSet: "abc",
-            imgUrl: "add later",
+            title: "Coming soon...",
+            description: "Coming soon...",
+            skillSet: "Coming soon...",
+            imgUrl: "https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         },
         {
-            title: "Test3",
-            description: "test",
-            skillSet: "abc",
-            imgUrl: "add later",
+            title: "Coming soon...",
+            description: "Coming soon...",
+            skillSet: "Coming soon...",
+            imgUrl: "https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         },
     ]
     return (
-        <section className='project' id="project">
+        <section className='project' id="projects">
             <Container>
                 <Row>
                     <Col>
@@ -32,52 +33,69 @@ function Projects() {
                         <Tab.Container id="projects-tabs" defaultActiveKey="link-1">
                             <Nav justify variant="tabs" className='nav-tabs mb-5 justify-content-center align-items-center' id='nav-pills'>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="link-1">Project 1</Nav.Link>
+                                    <Nav.Link eventKey="link-1" style={{ textDecoration: 'none' }}>{projects[0].title}</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="link-2">Project 2</Nav.Link>
+                                    <Nav.Link eventKey="link-2">{projects[1].title}</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="link-3">Project 3</Nav.Link>
+                                    <Nav.Link eventKey="link-3">{projects[2].title}</Nav.Link>
                                 </Nav.Item>
 
                             </Nav>
-                        </Tab.Container>
-                        <Tab.Content>
-                            <Tab.Pane eventKey="link-1">
-                                <Row>
-                                    <Col sm={6} md={4}>
 
-                                    </Col>
-                                </Row>
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="link-2">
-                                <Row>
-                                    <Card style={{ width: '18rem', color: 'white' }} className="">
-                                        <Card.Body>
-                                            <Card.Title>Front-end</Card.Title>
-                                            <Card.Text>
-                                                Some quick example text to build on the card title and make up the
-                                                bulk of the card's content.
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </Card>
-                                </Row>
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="link-3">
-                                <Row>
-                                    <Card style={{ width: '18rem', color: 'white' }} className="">
-                                        <Card.Body>
-                                            <Card.Title>Front-end</Card.Title>
-                                            <Card.Text>
-                                                Some quick example text to build on the card title and make up the
-                                                bulk of the card's content.
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </Card>
-                                </Row>
-                            </Tab.Pane>
-                        </Tab.Content>
+                            <Tab.Content>
+                                <Tab.Pane eventKey="link-1" style={{ color: 'white' }}>
+                                    <Row>
+                                        <Card style={{ width: '100%', color: 'white' }} className="">
+                                            <Card.Body>
+                                                <Card.Title style={{ width: '100%', color: 'black' }}><h1>{projects[0].title}</h1></Card.Title>
+                                                <Card.Text>
+                                                    <img src={projects[0].imgUrl} alt="Project1 screenshot" style={{ width: "80%" }}></img>
+                                                    <br></br>
+                                                    <span>{projects[0].description}</span>
+                                                    <br></br>
+                                                    <span>{projects[0].skillSet}</span>
+                                                </Card.Text>
+                                            </Card.Body>
+                                        </Card>
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="link-2" style={{ color: 'white' }}>
+                                    <Row>
+                                        <Card style={{ width: '100%', color: 'white' }} className="">
+                                            <Card.Body>
+                                                <Card.Title style={{ width: '100%', color: 'black' }}><h1>{projects[1].title}</h1></Card.Title>
+                                                <Card.Text>
+                                                    <img src={projects[1].imgUrl} alt="Project2 screenshot" style={{ width: "80%" }}></img>
+                                                    <br></br>
+                                                    <span>{projects[1].description}</span>
+                                                    <br></br>
+                                                    <span>{projects[1].skillSet}</span>
+                                                </Card.Text>
+                                            </Card.Body>
+                                        </Card>
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="link-3" style={{ color: 'white' }}>
+                                    <Row>
+                                        <Card style={{ width: '100%', color: 'white' }} className="">
+                                            <Card.Body>
+                                                <Card.Title style={{ width: '100%', color: 'black' }}><h1>{projects[2].title}</h1></Card.Title>
+                                                <Card.Text>
+                                                    <img src={projects[2].imgUrl} alt="Project3 screenshot" style={{ width: "80%" }}></img>
+                                                    <br></br>
+                                                    <span>{projects[2].description}</span>
+                                                    <br></br>
+                                                    <span>{projects[2].skillSet}</span>
+                                                </Card.Text>
+                                            </Card.Body>
+                                        </Card>
+                                    </Row>
+                                </Tab.Pane>
+                            </Tab.Content>
+                        </Tab.Container>
+
                     </Col>
                 </Row>
             </Container>

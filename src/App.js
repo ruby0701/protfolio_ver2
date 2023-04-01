@@ -12,6 +12,16 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <Banner></Banner>
       <Skills></Skills>
       <Experience></Experience>
